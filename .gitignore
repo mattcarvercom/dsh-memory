@@ -1,0 +1,10 @@
+# Local dev junction into the dsh runtime's node_modules (dependency resolution
+# for @deepseek-ai/* packages when run from a non-installed checkout).
+node_modules
+
+# Temp files from atomic writes
+*.tmp
+
+# OS noise
+.DS_Store
+Thumbs.db

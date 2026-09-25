@@ -1,0 +1,16 @@
+# dsh-unified-memory bundle patch: adds the memory plugin row to the profile. Override
+# the row by id in your profile's cordis.patch.yml; an override replaces the
+# row's config wholesale, so restate every field you set. Example:
+#
+#   - id: memory
+#     config:
+#       mode: shared          # dsh | overlay | shared (omit to follow `mem mode`)
+#       promptMode: feedback  # preload only feedback rules; search the rest
+#
+# Change modes with `mem mode <mode> --dry-run`, then `mem mode <mode>`:
+# setting `mode` here alone never moves files.
+- insert:
+    - id: memory
+      name: 'dsh-unified-memory'
+      config:
+        includeInPrompt: true
